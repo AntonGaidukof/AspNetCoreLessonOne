@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreLessonOne", "AspNetCoreLessonOne\AspNetCoreLessonOne.csproj", "{E46DDB1C-A4CD-4F24-BD80-55C5B13B7552}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E46DDB1C-A4CD-4F24-BD80-55C5B13B7552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E46DDB1C-A4CD-4F24-BD80-55C5B13B7552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E46DDB1C-A4CD-4F24-BD80-55C5B13B7552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E46DDB1C-A4CD-4F24-BD80-55C5B13B7552}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3F983F5-E12B-4B11-B976-94307C9984CF}
+	EndGlobalSection
+EndGlobal

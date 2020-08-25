@@ -1,0 +1,23 @@
+﻿@model IEnumerable<EmployeeViewModel>
+
+<table class="table">
+    <tr>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Отчество</th>
+        <th>Возраст</th>
+        <th>Действие</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SurName</td>
+            <td>@item.FirstName</td>
+            <td>@item.MiddleName</td>
+            <td>@item.Age</td>
+            <td>
+                @Html.ActionLink("Детально", "Detailed", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
