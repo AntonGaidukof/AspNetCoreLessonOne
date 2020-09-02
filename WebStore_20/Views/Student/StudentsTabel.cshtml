@@ -1,0 +1,41 @@
+﻿@model IEnumerable<StudentViewModel>
+
+@{
+    ViewData["Title"] = "StudentsTable";
+}
+
+<a asp-action="Edit" class="btn btn-success add-btn">Добавить</a>
+
+<table class="table">
+    <tr>
+        <th></th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Отчество</th>
+        <th>Курс</th>
+        <th>Специальность</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a></td>
+            <td>@item.SurName</td>
+            <td>@item.FirstName</td>
+            <td>@item.MiddleName</td>
+            <td>@item.Course</td>
+            <td>@item.Specialty</td>
+            <td>
+                @Html.ActionLink("Детально", "StudentDetails", new { id = item.Id })
+            </td>
+            <td>
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+
+@section Styles {
+    <link href="~/css/buttons.css" rel="stylesheet">
+}

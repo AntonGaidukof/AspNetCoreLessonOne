@@ -1,15 +1,29 @@
 ﻿@model IEnumerable<EmployeeViewModel>
 
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<a asp-action="Edit" class="btn btn-success add-btn">Добавить</a>
+
 <table class="table">
     @foreach (var item in Model)
     {
         <tr>
+            <td><a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a></td>
             <td>@item.FirstName</td>
             <td>@item.SurName</td>
             <td>@item.Patronymic</td>
             <td>
                 @Html.ActionLink("Детали", "EmployeeDetails", new { id = item.Id })
             </td>
+            <td>
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+            </td>
         </tr>
     }
 </table>
+
+@section Styles {
+    <link href="~/css/buttons.css" rel="stylesheet">
+}

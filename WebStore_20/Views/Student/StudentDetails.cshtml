@@ -1,10 +1,8 @@
-﻿@model EmployeeViewModel
+﻿@model StudentViewModel
 
 @{
-    ViewData["Title"] = "EmployeeDetails";
+    ViewData["Title"] = "StudentDetails";
 }
-
-@Html.ActionLink("Назад к списку", "Employees", "Employee")
 
 <table class="table table-bordered">
     <tr>
@@ -21,14 +19,16 @@
     </tr>
     <tr>
         <td>Отчество</td>
-        <td>@Model.Patronymic</td>
+        <td>@Model.MiddleName</td>
     </tr>
     <tr>
-        <td>Возраст</td>
-        <td>@Model.Age</td>
+        <td>Курс</td>
+        <td>@Model.Course</td>
     </tr>
     <tr>
-        <td>Должность</td>
-        <td>@Model.Position</td>
+        <td>Специальность</td>
+        <td>@Model.Specialty</td>
     </tr>
 </table>
+
+@Html.ActionLink("К списку", "Students")
